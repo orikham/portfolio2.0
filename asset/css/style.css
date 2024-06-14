@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**************début RAZ**************/
+@font-face {
+  font-family: "Retro";
+  src: url(../font/Retro\ Gaming.ttf);
+}
+@font-face {
+  font-family: "test";
+  src: url(../font/Magic\ Fleurons\ NC.ttf);
+}
+/*............................RAZ.........................*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row-limit-size {
+  max-width: 1200px;
+  width: 100%;
+}
+
+body {
+  background-image: url(../images/fond/theme.png);
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+/**************fin RAZ**************/
+/*....................début index.php.............................*/
+#accueil {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+}
+#accueil .moving-image {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  z-index: -1;
+  transition: transform 5s linear;
+}
+#accueil #index-header {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+#accueil #index-header > h1 {
+  font-family: "Retro";
+  font-size: 4rem;
+  color: #DB19A0;
+  margin: 5px;
+  animation: colorFade 10s infinite;
+}
+#accueil #index-header > h2 {
+  font-family: "Retro";
+  font-size: 2rem;
+  color: #EA667E;
+  margin: 5px;
+}
+#accueil nav {
+  margin-top: 200px;
+  font-size: 2rem;
+  font-family: "Retro";
+  justify-content: center;
+  display: flex;
+}
+#accueil nav ul li {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  flex-direction: row;
+}
+#accueil nav ul li img {
+  width: 25px;
+  height: 25px;
+}
+#accueil nav ul li a {
+  margin-left: 10px;
+  color: #D918A7;
+}
+
+/*....................fin index.php.............................*/
+@keyframes colorFade {
+  0% {
+    color: #DB19A0;
+  }
+  25% {
+    color: #EA667E;
+  }
+  50% {
+    color: #FF7FFF;
+  }
+  75% {
+    color: #EA667E;
+  }
+  100% {
+    color: #DB19A0;
+  }
+}/*# sourceMappingURL=style.css.map */
