@@ -199,6 +199,11 @@ main > #mesProjets > article > .containerCards {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1 0 30%;
+  /* Masquer la scrollbar pour Firefox */
+  scrollbar-width: none; /* Masque la scrollbar */
+}
+main > #mesProjets > article > .containerCards::-webkit-scrollbar {
+  display: none; /* Masque la scrollbar */
 }
 main > #mesProjets > article > .containerCards > .card {
   max-width: 350px;
