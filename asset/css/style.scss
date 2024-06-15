@@ -50,15 +50,29 @@ li {
     margin: 0 auto;
     position: relative;
 
-    .moving-image {
-        position: absolute;
-        width: 75px;
-        height: 75px;
-        z-index: -1;
-        // border: 1px solid black;
-        // border-radius: 200px;
-        transition: transform 5s linear;
+    .ticker-container {
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            /* Décale le contenu en dehors de la vue initiale */
+            animation: tickerMove 20s linear infinite;
+            /* Ajustez la durée selon vos besoins */
+
+            .ticker-item {
+                display: inline-block;
+                padding: 0 20px;
+                font-size: 1.2rem;
+                line-height: 2;
+                color: #EA667E;
+            }
+        }
     }
+
 
 
     #index-header {
@@ -68,20 +82,13 @@ li {
         align-items: center;
         margin-top: 100px;
 
-
-
         &>h1 {
             font-family: 'Retro';
             font-size: 4rem;
             color: #DB19A0; //EA667E
             margin: 5px;
-            animation: colorFade 10s infinite;
-
-
+            animation: colorFade 5s infinite;
         }
-
-
-
 
         &>h2 {
             font-family: 'Retro';
@@ -93,7 +100,7 @@ li {
     }
 
     nav {
-        margin-top: 200px;
+        margin-top: 130px;
         font-size: 2rem;
         font-family: 'Retro';
         justify-content: center;
@@ -119,12 +126,225 @@ li {
             }
         }
     }
+
+    #index-footer {
+        margin-top: 50px;
+
+        p {
+            padding: 10px;
+            color: #EA667E;
+            font-size: 1.3rem;
+
+            a {
+                color: #DB19A0;
+            }
+        }
+
+    }
 }
 
 /*....................fin index.php.............................*/
 
+/*....................début css squelette.............................*/
+
+/*.....HEADER.....*/
+
+.main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    nav {
+        width: 40%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+                a {
+                    font-family: 'Retro';
+                    color: #D918A7;
+                }
+            }
+        }
+    }
 
 
+
+
+
+}
+
+/*.....FOOTER.....*/
+.footer-site {
+    margin-top: 50px;
+
+    p {
+        padding: 10px;
+        color: #EA667E;
+        font-size: 1.3rem;
+
+        a {
+            color: #DB19A0;
+        }
+    }
+}
+
+/*....................début css contenus.............................*/
+main {
+    display: flex;
+    margin: 0 auto;
+
+    /*.....PAGE.FORMATION.....*/
+    #formation {
+        width: 100%;
+        height: 500px;
+        border: 1px solid aqua;
+
+        p {
+            color: red;
+        }
+
+        #arcade-menu {
+            width: 70%;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 50px;
+            position: relative;
+            height: 300px;
+            border: 1px solid blueviolet;
+
+            p {
+                color: red;
+            }
+
+            .moving-image {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                z-index: 1;
+                transition: transform 5s linear;
+            }
+
+        }
+    }
+
+    /*.....PAGE.PROJET.....*/
+    &>#mesProjets {
+        width: 100%;
+
+        &>article {
+
+
+            &>.containerCards {
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin-top: 50px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                flex: 1 0 30%;
+
+
+
+                &>.card {
+                    max-width: 350px;
+                    width: 100%;
+                    //background-color: #57304F;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 25px;
+                    border: 1px solid #EA667E;
+                    margin: 10px;
+
+                    &>.languages {
+
+                        &>img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    &>img {
+                        width: 350px;
+                        height: 200px;
+                    }
+
+                    &>h1 {
+
+                        margin: 10px auto;
+                        color: #EA667E;
+                        font-size: 2.2rem;
+                    }
+
+                    &>h2 {
+                        width: 300px;
+                        margin-top: 10px;
+                        color: #EA667E;
+                        font-size: 2.0rem;
+                        text-align: center;
+                    }
+
+                    &>p {
+
+                        width: 348px;
+                        height: 90px;
+                        margin-top: 10px;
+                        background-color: #F5D3D4;
+                        color: #57304F;
+                        font-size: 1.3rem;
+                        text-align: center;
+                        border-left: 1px solid #57304F;
+                        border-right: 1px solid #57304F;
+
+                    }
+
+                    &>a {
+                        width: 250px;
+                        margin: 15px auto;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        text-decoration: none;
+                        background-color: #F5D3D4;
+                        color: #57304F;
+
+                    }
+                }
+
+
+
+
+
+            }
+        }
+    }
+
+
+
+
+
+    /*.....PAGE.CONTACT.....*/
+
+
+    /*.....PAGE.CREDIT.....*/
+}
+
+
+
+@keyframes tickerMove {
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 
 @keyframes colorFade {

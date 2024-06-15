@@ -41,12 +41,25 @@ li {
   margin: 0 auto;
   position: relative;
 }
-#accueil .moving-image {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  z-index: -1;
-  transition: transform 5s linear;
+#accueil .ticker-container {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+#accueil .ticker-container .ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  /* Décale le contenu en dehors de la vue initiale */
+  animation: tickerMove 20s linear infinite;
+  /* Ajustez la durée selon vos besoins */
+}
+#accueil .ticker-container .ticker-content .ticker-item {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #EA667E;
 }
 #accueil #index-header {
   width: 50%;
@@ -60,7 +73,7 @@ li {
   font-size: 4rem;
   color: #DB19A0;
   margin: 5px;
-  animation: colorFade 10s infinite;
+  animation: colorFade 5s infinite;
 }
 #accueil #index-header > h2 {
   font-family: "Retro";
@@ -69,7 +82,7 @@ li {
   margin: 5px;
 }
 #accueil nav {
-  margin-top: 200px;
+  margin-top: 130px;
   font-size: 2rem;
   font-family: "Retro";
   justify-content: center;
@@ -89,8 +102,162 @@ li {
   margin-left: 10px;
   color: #D918A7;
 }
+#accueil #index-footer {
+  margin-top: 50px;
+}
+#accueil #index-footer p {
+  padding: 10px;
+  color: #EA667E;
+  font-size: 1.3rem;
+}
+#accueil #index-footer p a {
+  color: #DB19A0;
+}
 
 /*....................fin index.php.............................*/
+/*....................début css squelette.............................*/
+/*.....HEADER.....*/
+.main-header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.main-header nav {
+  width: 40%;
+}
+.main-header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main-header nav ul li a {
+  font-family: "Retro";
+  color: #D918A7;
+}
+
+/*.....FOOTER.....*/
+.footer-site {
+  margin-top: 50px;
+}
+.footer-site p {
+  padding: 10px;
+  color: #EA667E;
+  font-size: 1.3rem;
+}
+.footer-site p a {
+  color: #DB19A0;
+}
+
+/*....................début css contenus.............................*/
+main {
+  display: flex;
+  margin: 0 auto;
+  /*.....PAGE.FORMATION.....*/
+  /*.....PAGE.PROJET.....*/
+  /*.....PAGE.CONTACT.....*/
+  /*.....PAGE.CREDIT.....*/
+}
+main #formation {
+  width: 100%;
+  height: 500px;
+  border: 1px solid aqua;
+}
+main #formation p {
+  color: red;
+}
+main #formation #arcade-menu {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  height: 300px;
+  border: 1px solid blueviolet;
+}
+main #formation #arcade-menu p {
+  color: red;
+}
+main #formation #arcade-menu .moving-image {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  z-index: 1;
+  transition: transform 5s linear;
+}
+main > #mesProjets {
+  width: 100%;
+}
+main > #mesProjets > article > .containerCards {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1 0 30%;
+}
+main > #mesProjets > article > .containerCards > .card {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #EA667E;
+  margin: 10px;
+}
+main > #mesProjets > article > .containerCards > .card > .languages > img {
+  width: 25px;
+  height: 25px;
+}
+main > #mesProjets > article > .containerCards > .card > img {
+  width: 350px;
+  height: 200px;
+}
+main > #mesProjets > article > .containerCards > .card > h1 {
+  margin: 10px auto;
+  color: #EA667E;
+  font-size: 2.2rem;
+}
+main > #mesProjets > article > .containerCards > .card > h2 {
+  width: 300px;
+  margin-top: 10px;
+  color: #EA667E;
+  font-size: 2rem;
+  text-align: center;
+}
+main > #mesProjets > article > .containerCards > .card > p {
+  width: 348px;
+  height: 90px;
+  margin-top: 10px;
+  background-color: #F5D3D4;
+  color: #57304F;
+  font-size: 1.3rem;
+  text-align: center;
+  border-left: 1px solid #57304F;
+  border-right: 1px solid #57304F;
+}
+main > #mesProjets > article > .containerCards > .card > a {
+  width: 250px;
+  margin: 15px auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #F5D3D4;
+  color: #57304F;
+}
+
+@keyframes tickerMove {
+  to {
+    transform: translateX(-100%);
+  }
+}
 @keyframes colorFade {
   0% {
     color: #DB19A0;

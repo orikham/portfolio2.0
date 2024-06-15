@@ -10,6 +10,15 @@
 
 <body>
     <main class="row-limit-size" id="accueil">
+
+        <div class="ticker-container">
+            <div class="ticker-content">
+                <span class="ticker-item">29/12/2023 : Obtention du Titre-pro Developpeur web et web mobile.</span>
+                <span class="ticker-item">1/06/2024 : Version 2 du Portfolio (celui-ci) en cours de construction.</span>
+
+            </div>
+        </div>
+
         <header class="row-limit-size " id="index-header">
 
             <h1>
@@ -28,25 +37,26 @@
 
         <nav>
             <ul>
-                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="formation.php">Formation/Skills</a></li>
-                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="projets.php">Mes Projets</a></li>
-                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="contact.php">Contact</a></li>
-                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="credit.php">Crédits</a></li>
+                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/formation.php">Formation/Skills</a></li>
+                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/mesProjets.php">Mes Projets</a></li>
+                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/contact.php">Contact</a></li>
+                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/credit.php">Crédits</a></li>
             </ul>
         </nav>
 
 
 
+        <footer id="index-footer">
+            <p class="row-limit-size" id="copyright">&#169;Orikham 2023, crédits fond: <a href="https://fr.freepik.com/">freepik.com</a>, crédits icones: <a href="https://flaticon.com/">flaticon.com</a>,</p>
+        </footer>
     </main>
 
 
 
-    <footer id="index-footer">
-        <p id="copyright">&#169;site réalisé par Orikham, crédits fond <a href="https://fr.freepik.com/">freepik.com</a>, crédits icones <a href="https://flaticon.com/">flaticon.com</a>,</p>
-    </footer>
 
 
-    <script src="./asset/js/animation.js"></script>
+
+    <!-- <script src="./asset/js/animation.js"></script> -->
 </body>
 
 </html>

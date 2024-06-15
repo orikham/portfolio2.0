@@ -1,24 +1,24 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const accueil = document.getElementById('accueil');
+    const arcadeMenu = document.getElementById('arcade-menu');
     const symboles = [
-      './asset/images/svgcode/css3.svg',
-      './asset/images/svgcode/dribbble.svg',
-      './asset/images/svgcode/figma.svg',
-      './asset/images/svgcode/git.svg',
-      './asset/images/svgcode/github.svg',
-      './asset/images/svgcode/html5.svg',
-      './asset/images/svgcode/js.svg',
-      './asset/images/svgcode/notion.svg',
-      './asset/images/svgcode/php.svg',
-      './asset/images/svgcode/sass.svg',
-      './asset/images/svgcode/sql.svg',
-      './asset/images/svgcode/vs_code.svg'
+      '../asset/images/svgcode/css3.svg',
+      '../asset/images/svgcode/dribbble.svg',
+      '../asset/images/svgcode/figma.svg',
+      '../asset/images/svgcode/git.svg',
+      '../asset/images/svgcode/github.svg',
+      '../asset/images/svgcode/html5.svg',
+      '../asset/images/svgcode/js.svg',
+      '../asset/images/svgcode/notion.svg',
+      '../asset/images/svgcode/php.svg',
+      '../asset/images/svgcode/sass.svg',
+      '../asset/images/svgcode/sql.svg',
+      '../asset/images/svgcode/vs_code.svg'
     ];
   
     // Fonction pour obtenir des positions aléatoires dans le conteneur
     function getRandomPosition() {
-      const containerRect = accueil.getBoundingClientRect();
+      const containerRect = arcadeMenu.getBoundingClientRect();
       const x = Math.random() * (containerRect.width - 75); // 75 est la largeur de l'image
       const y = Math.random() * (containerRect.height - 75); // 75 est la hauteur de l'image
       return { x, y };
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = document.createElement('img');
       img.src = symbole;
       img.classList.add('moving-image');
-      accueil.appendChild(img);
+      arcadeMenu.appendChild(img);
     });
   
     // Appeler la fonction pour animer les images
