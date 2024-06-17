@@ -202,21 +202,30 @@ main {
     /*.....PAGE.FORMATION.....*/
     #formation {
         width: 100%;
-        height: 500px;
+        //height: 500px;
         border: 1px solid aqua;
 
         p {
             color: red;
         }
 
+        .curseur-cible {
+
+            cursor: url(../images/reticule.cur),auto;
+        }
+
         #arcade-menu {
+            background-image: url(../images/fond/fondArcade.png);
+            background-repeat: no-repeat;
             width: 70%;
             display: flex;
             margin: 0 auto;
-            margin-top: 50px;
+            //margin-top: 50px;
             position: relative;
-            height: 300px;
+            height: 500px;
             border: 1px solid blueviolet;
+
+
 
             p {
                 color: red;
@@ -252,11 +261,13 @@ main {
                 flex: 1 0 30%;
 
                 &::-webkit-scrollbar {
-                    display: none; /* Masque la scrollbar */
+                    display: none;
+                    /* Masque la scrollbar */
                 }
-            
+
                 /* Masquer la scrollbar pour Firefox */
-                scrollbar-width: none; /* Masque la scrollbar */
+                scrollbar-width: none;
+                /* Masque la scrollbar */
 
 
 
@@ -304,8 +315,8 @@ main {
                         width: 348px;
                         height: 90px;
                         margin-top: 10px;
-                        background-color: #F5D3D4;
-                        color: #57304F;
+                        //background-color: #F5D3D4;
+                        color: #EA667E;
                         font-size: 1.3rem;
                         text-align: center;
                         border-left: 1px solid #57304F;

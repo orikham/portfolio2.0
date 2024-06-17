@@ -6,7 +6,7 @@
 
 	
 
-	<div id="arcade-menu">
+	<div id="arcade-menu" class="curseur-cible">
 	<p>ecran affichage borne d'arcade + icones developpeur</p>
 	</div>
 
