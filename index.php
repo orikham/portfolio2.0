@@ -37,7 +37,7 @@
 
         <nav>
             <ul>
-                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/formation.php">Formation/Skills</a></li>
+                <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/formation.php">Skills</a></li>
                 <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/mesProjets.php">Mes Projets</a></li>
                 <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/contact.php">Contact</a></li>
                 <li><img src="./asset/images/piece-de-monnaie.png" alt="piece de monnaie retro"><a href="./site/credit.php">Crédits</a></li>

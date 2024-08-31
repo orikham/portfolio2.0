@@ -25,7 +25,7 @@
             <div id="logo"><a href="../index.php"> <img src="./img/logoDef.png" title="retour a l'accueil"> </a></div>
             <nav>
                 <ul>
-                    <li><a href="./formation.php">Formation/skills</a></li>
+                    <li><a href="./formation.php">Skills</a></li>
                     <li><a href="./mesProjets.php">Projets</a></li>
                     <li><a href="./contact.php">Contact</a></li>
                     <li><a href="./credit.php">Crédits</a></li>

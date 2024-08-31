@@ -15,7 +15,7 @@ $dbh = null;
 
 try {
     $db = new PDO('mysql:host=localhost;dbname=portfolio;charset=UTF8', 'root');
-   // $db = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
+  //  $db = new PDO("mysql:host=$host_name; dbname=$database;", $user_name, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Requête SQL pour récupérer les projets et leurs langages associés

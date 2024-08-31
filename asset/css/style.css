@@ -161,22 +161,41 @@ main {
 }
 main #formation {
   width: 100%;
-  border: 1px solid aqua;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-main #formation p {
-  color: red;
+main #formation #arcade-game {
+  background-image: url(../images/fond/controlescreen.png);
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main #formation .curseur-cible {
-  cursor: url(../images/reticule.cur), auto;
+main #formation #arcade-game #target-description {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main #formation #arcade-game #target-description p {
+  color: #D918A7;
+  width: 80%;
+  font-size: 1rem;
+  font-family: "retro";
+  word-wrap: break-word;
+  word-break: break-all;
 }
 main #formation #arcade-menu {
-  background-image: url(../images/fond/fondArcade.png);
-  background-repeat: no-repeat;
-  width: 70%;
+  cursor: url(../images/reticule.cur), auto;
+  width: 30%;
   display: flex;
   margin: 0 auto;
   position: relative;
-  height: 500px;
+  height: 300px;
   border: 1px solid blueviolet;
 }
 main #formation #arcade-menu p {
@@ -188,6 +207,9 @@ main #formation #arcade-menu .moving-image {
   height: 75px;
   z-index: 1;
   transition: transform 5s linear;
+}
+main #formation #arcade-menu .moving-image.explode {
+  animation: explosion 0.5s ease-out forwards;
 }
 main > #mesProjets {
   width: 100%;
@@ -261,6 +283,163 @@ main > #mesProjets > article > .containerCards > .card > a {
   background-color: #F5D3D4;
   color: #57304F;
 }
+main > #contact {
+  width: 100%;
+}
+main > #contact > #titreFormulaire {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  color: #F07D6B;
+}
+main > #contact > #formulaire {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px auto;
+  border-radius: 10px 10px 10px 10px;
+}
+main > #contact > #formulaire > #boite {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+main > #contact > #formulaire > #boite > #infosContact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > #contact > #formulaire > #boite > #infosContact > h2 {
+  color: #F07D6B;
+  margin-top: 10px;
+}
+main > #contact > #formulaire > #boite > #infosContact > p {
+  margin-top: 20px;
+  color: #F07D6B;
+}
+main > #contact > #formulaire > #boite > form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+main > #contact > #formulaire > #boite > form > .champ {
+  width: 250px;
+  margin-left: 39px;
+  margin-top: 30px;
+  color: #F07D6B;
+}
+main > #contact > #formulaire > #boite > form > .champ > label {
+  color: #F07D6B;
+}
+main > #contact > #formulaire > #boite > form > .champ > input {
+  border: 0;
+  height: 25px;
+  border-radius: 50px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+main > #contact > #formulaire > #boite > form > .champ > textarea {
+  width: 400px;
+  height: 100px;
+  resize: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+main > #contact > #formulaire > #boite > form > .formu {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  margin: 25px auto;
+  justify-content: center;
+  align-items: center;
+  color: #F07D6B;
+  font-size: 1.3rem;
+  background-color: #f5d3d4;
+  border: 0;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0 10px 3px #5f256f;
+}
+main > #contact > #formulaire > #boite > form > .formu:hover {
+  display: block;
+  height: 50px;
+  transform: scale(1.5, 1.5);
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+}
+main > #contact > #formulaire > #boite > form > #identity {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+main > #contact > #formulaire > #boite > form > #identity > .champ > label {
+  color: #F5D3D4;
+}
+main > #contact > #formulaire > #boite > form > #identity > .champ > input {
+  border: 0;
+  width: 150px;
+  height: 25px;
+  border-radius: 50px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+main > #contact > #formulaire > #reseauxSociaux {
+  width: 50%;
+}
+main > #contact > #formulaire > #reseauxSociaux > #fondImg {
+  position: relative;
+  width: 450px;
+  border-radius: 50%;
+  left: 25px;
+  top: 180px;
+}
+main > #contact > #formulaire > #reseauxSociaux > #fondImg > .rezo {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 15%;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial {
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial > .mediaLogo {
+  position: absolute;
+  transform-origin: bottom center;
+  animation: orbit 10s linear infinite;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial > .mediaLogo > img {
+  width: 90px;
+  height: 90px;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(2) {
+  animation-delay: 1s;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(3) {
+  animation-delay: 2s;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(4) {
+  animation-delay: 3s;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(5) {
+  animation-delay: 4s;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(6) {
+  animation-delay: 5s;
+}
+main > #contact > #formulaire > #reseauxSociaux > #logosSocial .mediaLogo:nth-child(7) {
+  animation-delay: 6s;
+}
 
 @keyframes tickerMove {
   to {
@@ -282,5 +461,23 @@ main > #mesProjets > article > .containerCards > .card > a {
   }
   100% {
     color: #DB19A0;
+  }
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateY(225px);
+  }
+  to {
+    transform: rotate(360deg) translateY(225px) rotate(-360deg);
+  }
+}
+@keyframes explosion {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2); /* Ajuste la taille finale de l'explosion */
+    opacity: 0; /* Rendre l'image invisible après l'explosion */
   }
 }/*# sourceMappingURL=style.css.map */
